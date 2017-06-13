@@ -19,8 +19,8 @@ public:
     selectionWindows(MainWindow * w);
     void selectionWindows::addWindows();
 
-    int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pCmdLine, int iCmdShow);
-    BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lparam);
+  // int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, PSTR pCmdLine, int iCmdShow);
+   static BOOL CALLBACK EnumWindowsProc(HWND hWnd, long lparam);
 
     ~selectionWindows();
 
@@ -34,6 +34,8 @@ private:
 
     int placementX = 100;
     int placementY = 25;
+
+    char buff[255];
 
 
 };

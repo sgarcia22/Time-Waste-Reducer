@@ -8,7 +8,8 @@
 #include <QLabel>
 #include <QSizePolicy>
 #include <QDebug>
-
+#include <windows.h>
+#include <iostream>
 
 ///The main purpose of this application is to help computer users stop getting distracted
 /// When doing a task or work. The pop up application will appear on the bottom right
@@ -34,6 +35,9 @@ int main(int argc, char *argv[])
           currentWindows->addWindows();
           currentState->currentlyRunning = true;
     }
+
+    selectionWindows* windowsOpen = new selectionWindows(w);
+
 
     return a.exec();
 }
